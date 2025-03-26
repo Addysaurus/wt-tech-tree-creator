@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>WT Tech Tree Creator</title>
+</head>
+<body>
+    <navbar>
+        <div class="navbar-option" id="add-vehicle-open-btn">Add vehicle</div>
+        <div class="navbar-option" id="edit-vehicle-open-btn">Edit vehicle</div>
+        <div class="navbar-option" id="remove-vehicle-open-btn">Remove vehicle</div>
+        <div class="navbar-option" id="vehicle-ordering-open-btn">Vehicle ordering</div>
+        <div class="navbar-option" id="backup-open-btn">Backup</div>
+        <div class="navbar-option" id="export-open-btn">Export</div>
+        <div class="navbar-option" id="clone-wt-wiki-open-btn">Clone WT wiki tree</div>
+        <div class="navbar-option" id="settings-open-btn">Settings</div>
+    </navbar>
+    <div class="tree-selector">
+        <div class="tree-type tree-type-selected" id="ground-forces">
+            Ground forces
+        </div>
+        <div class="tree-type" id="helicopters">
+            Helicopters
+        </div>
+        <div class="tree-type" id="aircraft">
+            Aircraft
+        </div>
+        <div class="tree-type" id="bluewater-fleet">
+            Bluewater fleet
+        </div>
+        <div class="tree-type" id="coastal-fleet">
+            Coastal fleet
+        </div>
+    </div>
+
+    <!-- Navbar modals -->
+     <div class="modal" id="add-vehicle-modal">
+        <div class="modal-content">
+            <span class="modal-close-btn" id="add-vehicle-close-btn">&times;</span>
+            <p>This is a simple modal!</p>
+        </div>
+     </div>
+    <script src="script.js"></script>
+</body>
+</html>
