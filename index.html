@@ -97,10 +97,25 @@
                     </div>
                     <div class="stat-card-entry-grid">
                         <h3 class="modal-section-title">Stat card data (optional)</h3>
-                        <div>
-                            <label class="modal-form-label" for="weapon">Weapon:</label>
-                            <input type="text" id="weapon">
+                        <div id="weapon-list">
+                            <div class="modal-weapon">
+                                <h3 class="modal-section-title">Weapon 1</h3>
+                                <div>
+                                    <label class="modal-form-label" for="weapon-name-1">Name:</label>
+                                    <input type="text" id="weapon-name-1">
+                                </div>
+                                <div>
+                                    <label class="modal-form-label" for="weapon-amount-1">Amount:</label>
+                                    <input type="text" id="weapon-amount-1">
+                                </div>
+                                <div>  
+                                    <label class="modal-form-label" for="weapon-ammo-count-1">Ammunition count:</label>
+                                    <input type="text" id="weapon-ammo-count-1">
+                                </div>
+                                <button type="button" class="remove-weapon">🗙</button>
+                            </div>
                         </div>
+                        <button type="button" id="add-weapon">Add weapon</button>
                     </div>
                 </form>
             </div>

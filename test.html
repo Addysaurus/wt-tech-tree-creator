@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Weapon Inputs with Removal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .weapon-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .weapon-container label {
+            margin-right: 10px;
+        }
+        .weapon-container button {
+            margin-left: 10px;
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 2px 6px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .weapon-container button:hover {
+            background-color: darkred;
+        }
+        button#addWeapon {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Weapon Form</h2>
+    <form id="weaponForm">
+        <div id="weaponFields">
+            <div class="weapon-container">
+                <label for="weapon1">Weapon 1:</label>
+                <input type="text" id="weapon1" name="weapon1">
+                <button type="button" class="removeWeapon" onclick="removeWeapon(this)">❌</button>
+            </div>
+        </div>
+        <button type="button" id="addWeapon">Add Weapon</button>
+    </form>
+
+    <script>
+        let weaponCount = 1; // Tracks the number of weapon inputs
+
+        document.getElementById("addWeapon").addEventListener("click", function () {
+            weaponCount++; // Increment counter
+            const weaponFields = document.getElementById("weaponFields");
+
+            // Create new div container for weapon input
+            const newWeaponDiv = document.createElement("div");
+            newWeaponDiv.classList.add("weapon-container");
+
+            // Create new label
+            const newLabel = document.createElement("label");
+            newLabel.setAttribute("for", "weapon" + weaponCount);
+            newLabel.textContent = "Weapon " + weaponCount + ":";
+
+            // Create new input field
+            const newInput = document.createElement("input");
+            newInput.setAttribute("type", "text");
+            newInput.setAttribute("id", "weapon" + weaponCount);
+            newInput.setAttribute("name", "weapon" + weaponCount);
+
+            // Create remove button
+            const removeBtn = document.createElement("button");
+            removeBtn.setAttribute("type", "button");
+            removeBtn.classList.add("removeWeapon");
+            removeBtn.textContent = "❌";
+            removeBtn.onclick = function() { removeWeapon(removeBtn); };
+
+            // Append elements to the div
+            newWeaponDiv.appendChild(newLabel);
+            newWeaponDiv.appendChild(newInput);
+            newWeaponDiv.appendChild(removeBtn);
+
+            // Append the new div to the form
+            weaponFields.appendChild(newWeaponDiv);
+        });
+
+        function removeWeapon(button) {
+            const weaponFields = document.getElementById("weaponFields");
+            button.parentElement.remove(); // Remove the weapon container
+
+            // Renumber remaining weapons
+            const weaponContainers = weaponFields.getElementsByClassName("weapon-container");
+            weaponCount = 0; // Reset count
+            Array.from(weaponContainers).forEach((div, index) => {
+                weaponCount++;
+                div.querySelector("label").setAttribute("for", "weapon" + weaponCount);
+                div.querySelector("label").textContent = "Weapon " + weaponCount + ":";
+                div.querySelector("input").setAttribute("id", "weapon" + weaponCount);
+                div.querySelector("input").setAttribute("name", "weapon" + weaponCount);
+            });
+        }
+    </script>
+
+</body>
+</html>

@@ -144,8 +144,8 @@ navbar {
     padding: 1rem;
 }
 
-.modal-col > div {
-    padding: 2px;
+.modal-col > div, .modal-weapon > div {
+    padding: 3px;
 }
 
 .modal-close-btn {
@@ -172,4 +172,15 @@ navbar {
 
 .modal-form-label {
     color: #c0c0c0;
+}
+
+.modal-weapon {
+    border: 1px solid #c0c0c0;
+    padding: 1rem;
+    place-items: center;
+}
+
+#add-weapon {
+    margin-top: 1rem;
+    margin-left: 0;
 }
