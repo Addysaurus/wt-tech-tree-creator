@@ -114,7 +114,7 @@ navbar {
     justify-content: center;
 }
 
-.modal-form {
+.modal-form-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: 7.5rem;
@@ -135,6 +135,13 @@ navbar {
 
 .modal-col {
     place-items: center;
+}
+
+.stat-card-entry-grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    place-items: center;
+    padding: 1rem;
 }
 
 .modal-col > div {
