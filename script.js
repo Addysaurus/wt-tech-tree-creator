@@ -31,14 +31,11 @@ const add_vehicle_close_btn = document.getElementById('add-vehicle-close-btn')
 
 add_vehicle_open_btn.addEventListener('click', () => {
     add_vehicle_modal.style.display = 'block'
+    document.getElementById('modal-bg-overlay').style.display = 'block'
 })
 
 add_vehicle_close_btn.addEventListener('click', () => {
     add_vehicle_modal.style.display = 'none'
-})
-
-window.addEventListener("click", (e) => {
-    if (e.target === add_vehicle_modal) {
-        modal.style.display = "none";
-    }
+    document.getElementById('add-vehicle-open-btn').classList.remove('navbar-option-selected')
+    document.getElementById('modal-bg-overlay').style.display = 'none'
 })

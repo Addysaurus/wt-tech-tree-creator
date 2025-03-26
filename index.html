@@ -7,6 +7,7 @@
     <title>WT Tech Tree Creator</title>
 </head>
 <body>
+    <div class="modal-bg-overlay" id="modal-bg-overlay"></div>
     <navbar>
         <div class="navbar-option" id="add-vehicle-open-btn">Add vehicle</div>
         <div class="navbar-option" id="edit-vehicle-open-btn">Edit vehicle</div>
@@ -38,8 +39,48 @@
     <!-- Navbar modals -->
      <div class="modal" id="add-vehicle-modal">
         <div class="modal-content">
-            <div class="modal-close-btn" id="add-vehicle-close-btn">&times;</div>
-            <p>This is a simple modal!</p>
+            <div class="modal-header">
+                <h2 class="modal-title">Add a vehicle</h2>
+                <span class="modal-close-btn" id="add-vehicle-close-btn"><img src="svgs/modal_exit.svg" class="modal-close-btn-svg"></span>
+            </div>
+            <div class="modal-subcontent">
+                <form class="modal-form" id="add-vehicle-form">
+                    <div class="modal-col">
+                        <h3 class="modal-section-title">Vehicle data</h3>
+                        <div>
+                            <label class="modal-form-label" for="vehicle-name">Vehicle name:</label>
+                            <input type="text" id="vehicle-name">
+                        </div>
+                        <div>
+                            <label class="modal-form-label" for="vehicle-br">Vehicle battle rating</label>
+                            <input type="number" id="vehicle-br" class="form-number-entry">
+                        </div>
+                        <div>
+                            <label class="modal-form-label" for="vehicle-thumbnail">Vehicle thumbnail (url)</label>
+                            <input type="text" id="vehicle-thumbnail">
+                        </div>
+                    </div>
+                    <div class="modal-col">
+                        <h3 class="modal-section-title">Tree placement</h3>
+                        <div>
+                            <label class="modal-form-label" for="vehicle-rank">Vehicle rank</label>
+                            <input type="number" id="vehicle-rank" class="form-number-entry">
+                        </div>
+                        <div>
+                            <label class="modal-form-label" for="vehicle-branch">Vehicle branch</label>
+                            <input type="number" id="vehicle-branch" class="form-number-entry">
+                        </div>
+                        <div>
+                            <label class="modal-form-label" for="vehicle-connected">Connection to previous vehicle</label>
+                            <select name="vehicle-connected" id="vehicle-connected">
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                                <option value="folder">Folder</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
      </div>
     <script src="script.js"></script>
