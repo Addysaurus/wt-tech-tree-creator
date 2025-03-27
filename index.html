@@ -82,11 +82,11 @@
                                 <input type="number" id="vehicle-branch" class="form-number-entry">
                             </div>
                             <div>
-                                <label class="modal-form-label" for="vehicle-connected">Connection type to previous vehicle:</label>
+                                <label class="modal-form-label" for="vehicle-connected">Connection type:</label>
                                 <select name="vehicle-connected" id="vehicle-connected">
-                                    <option value="yes">Yes</option>
-                                    <option value="no">No</option>
-                                    <option value="folder">Folder</option>
+                                    <option value="connected">Connected</option>
+                                    <option value="not-connected">Not connected</option>
+                                    <option value="foldered">Foldered</option>
                                 </select>
                             </div>
                             <div>
@@ -210,9 +210,7 @@
                         </div>
                     </div>
                     <div class="stat-card-entry-grid">
-                        <div class="modal-subcontainer">
-                            <button type="submit" id="add-vehicle-submit-btn">Submit</button>
-                        </div>
+                        <button type="submit" id="add-vehicle-submit-btn">Submit</button>
                     </div>
                 </form>
             </div>
