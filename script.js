@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function createWeaponElement(number) {
         // Create weapon container
         const weaponDiv = document.createElement("div");
-        weaponDiv.classList.add("modal-weapon");
+        weaponDiv.classList.add("modal-subcontainer");
 
         // Create section title
         const weaponTitle = document.createElement("h3");
@@ -89,6 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const amountInput = document.createElement("input");
         amountInput.setAttribute("type", "text");
         amountInput.setAttribute("id", `weapon-amount-${number}`);
+        amountInput.setAttribute("class", `form-number-entry`);
         amountDiv.appendChild(amountLabel);
         amountDiv.appendChild(amountInput);
 
@@ -101,6 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const ammoInput = document.createElement("input");
         ammoInput.setAttribute("type", "text");
         ammoInput.setAttribute("id", `weapon-ammo-count-${number}`);
+        ammoInput.setAttribute("class", `form-number-entry`);
         ammoDiv.appendChild(ammoLabel);
         ammoDiv.appendChild(ammoInput);
 
@@ -134,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
         weaponElement.remove(); // Remove the element
 
         // Renumber remaining weapons
-        const weaponEntries = weaponList.getElementsByClassName("modal-weapon");
+        const weaponEntries = weaponList.getElementsByClassName("modal-subcontainer");
         weaponCount = 0; // Reset count
         Array.from(weaponEntries).forEach((weapon, index) => {
             weaponCount++;

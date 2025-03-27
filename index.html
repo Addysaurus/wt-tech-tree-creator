@@ -37,7 +37,7 @@
     </div>
 
     <!-- Navbar modals -->
-     <div class="modal" id="add-vehicle-modal">
+    <div class="modal" id="add-vehicle-modal">
         <div class="modal-content">
             <div class="modal-header">
                 <h2 class="modal-title">Add a vehicle</h2>
@@ -98,7 +98,7 @@
                     <div class="stat-card-entry-grid">
                         <h3 class="modal-section-title">Stat card data (optional)</h3>
                         <div id="weapon-list">
-                            <div class="modal-weapon">
+                            <div class="modal-subcontainer">
                                 <h3 class="modal-section-title">Weapon 1</h3>
                                 <div>
                                     <label class="modal-form-label" for="weapon-name-1">Name:</label>
@@ -110,21 +110,109 @@
                                 </div>
                                 <div>
                                     <label class="modal-form-label" for="weapon-amount-1">Amount:</label>
-                                    <input type="text" id="weapon-amount-1">
+                                    <input type="number" id="weapon-amount-1" class="form-number-entry">
                                 </div>
                                 <div>  
                                     <label class="modal-form-label" for="weapon-ammo-count-1">Ammunition count:</label>
-                                    <input type="text" id="weapon-ammo-count-1">
+                                    <input type="number" id="weapon-ammo-count-1" class="form-number-entry">
                                 </div>
                                 <button type="button" class="remove-weapon">🗙</button>
                             </div>
                         </div>
                         <button type="button" id="add-weapon">Add weapon</button>
+                        <br>
+                        <div class="modal-subcontainer">
+                            <div>
+                                <label class="modal-form-label" for="turret-rotation-speed">Turret rotation speed:</label>
+                                <input type="number" id="turret-rotation-speed" class="form-number-entry"><span class="standard-text">°/s</span>
+                            </div>
+                            <div>
+                                <label class="modal-form-label" for="vertical-guidance-down">Vertical guidance:</label>
+                                <span class="standard-text">-</span><input type="number" id="vertical-guidance-down" class="form-number-entry"><span class="standard-text"> / +</span><input type="number" id="vertical-guidance-up" class="form-number-entry">
+                            </div>
+                            <div>
+                                <label class="modal-form-label" for="fire-rate">Fire rate:</label>
+                                <input type="number" id="fire-rate" class="form-number-entry"><span class="standard-text"> rounds/min</span>
+                            </div>
+                            <div>
+                                <label class="modal-form-label" for="reloading-rate">reloading rate:</label>
+                                <input type="number" id="reloading-rate" class="form-number-entry"><span class="standard-text"> s</span>
+                            </div>
+                        </div>
+                        <div class="modal-subcontainer">
+                            <div>
+                                <label class="modal-form-label" for="hull-armor-10">Hull armor:</label>
+                                <input type="number" id="hull-armor-10" class="form-number-entry"><span class="standard-text"> / </span><input type="number" id="hull-armor-100" class="form-number-entry"><span class="standard-text"> / </span><input type="number" id="hull-armor-500" class="form-number-entry">
+                            </div>
+                            <div>
+                                <label class="modal-form-label" for="turret-armor-10">Turret armor:</label>
+                                <input type="number" id="turret-armor-10" class="form-number-entry"><span class="standard-text"> / </span><input type="number" id="turret-armor-100" class="form-number-entry"><span class="standard-text"> / </span><input type="number" id="turret-armor-500" class="form-number-entry">
+                            </div>
+                            <div>
+                                <label class="modal-form-label" for="armor-penetration-10">Armor penetration:</label>
+                                <input type="number" id="armor-penetration-10" class="form-number-entry"><span class="standard-text"> / </span><input type="number" id="armor-penetration-100" class="form-number-entry"><span class="standard-text"> / </span><input type="number" id="armor-penetration-500" class="form-number-entry">
+                            </div>
+                            <div>
+                                <span class="standard-text">At distances: 10 / 100 / 500</span>
+                            </div>
+                        </div>
+                        <div class="modal-subcontainer">
+                            <div>
+                                <label class="modal-form-label" for="crew">Crew:</label>
+                                <input type="number" id="crew" class="form-number-entry">
+                            </div>
+                            <div>
+                                <label class="modal-form-label" for="mass">Mass:</label>
+                                <input type="number" id="mass" class="form-number-entry"><span class="standard-text"> t</span>
+                            </div>
+                            <div>
+                                <label class="modal-form-label" for="engine-hp">Engine power:</label>
+                                <input type="number" id="engine-hp" class="form-number-entry"><span class="standard-text"> at </span><input type="number" id="engine-rpm" class="form-number-entry"><span class="standard-text"> rpm</span>
+                            </div>
+                            <div>
+                                <label class="modal-form-label" for="speed">Max speed:</label>
+                                <input type="number" id="speed" class="form-number-entry"><span class="standard-text"> km/h</span>
+                            </div>
+                            <div>
+                                <label class="modal-form-label" for="visibility">Visibility:</label>
+                                <input type="number" id="visibility" class="form-number-entry"><span class="standard-text">%</span>
+                            </div>
+                        </div>
+                        <div class="modal-subcontainer">
+                            <div>
+                                <label class="modal-form-label" for="crew-train-cost">Crew train cost (SL):</label>
+                                <input type="number" id="crew-train-cost" class="form-number-entry">
+                            </div>
+                        </div>
+                        <div class="modal-subcontainer">
+                            <div>
+                                <label class="modal-form-label" for="timed-repair-cost">Repair cost depending on lifetime (SL):</label>
+                                <input type="number" id="timed-repair-cost" class="form-number-entry">
+                            </div>
+                            <div>
+                                <label class="modal-form-label" for="max-repair-cost">Max repair cost (SL):</label>
+                                <input type="number" id="max-repair-cost" class="form-number-entry"><span class="standard-text">/min</span>
+                            </div>
+                            <div>
+                                <label class="modal-form-label" for="free-repair-time-d">Free repair time:</label>
+                                <input type="number" id="free-repair-time-d" class="form-number-entry"><span class="standard-text">d </span><input type="number" id="free-repair-time-h" class="form-number-entry"><span class="standard-text">h </span><input type="number" id="free-repair-time-m" class="form-number-entry"><span class="standard-text">m</span>
+                            </div>
+                        </div>
+                        <div class="modal-subcontainer">
+                            <div>
+                                <label class="modal-form-label" for="rp-reward-multiplier">RP reward multiplier:</label>
+                                <input type="number" id="rp-reward-multiplier" class="form-number-entry">
+                            </div>
+                            <div>
+                                <label class="modal-form-label" for="sl-reward-multiplier">SL reward multiplier:</label>
+                                <input type="number" id="sl-reward-multiplier" class="form-number-entry">
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>
         </div>
-     </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

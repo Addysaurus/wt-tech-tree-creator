@@ -7,6 +7,10 @@
     font-family: PT-Sans-Light;
 }
 
+.standard-text {
+    color:#c0c0c0;
+}
+
 body {
     background-color: #202434;
     padding: 0;
@@ -121,7 +125,7 @@ navbar {
     place-items: center;
     border-width: 2px 2px 1px;
     border-style: solid;
-    border-color: #c0c0c0;;
+    border-color: #c0c0c0;
 }
 
 .modal-section-title {
@@ -180,7 +184,7 @@ navbar {
     color: #c0c0c0;
 }
 
-.modal-weapon {
+.modal-subcontainer {
     border: 1px solid #c0c0c0;
     padding: 1rem;
     place-items: center;
