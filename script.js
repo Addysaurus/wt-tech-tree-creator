@@ -156,4 +156,4 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".remove-weapon").addEventListener("click", function () {
         removeWeapon(this.parentElement);
     });
-});
+})
