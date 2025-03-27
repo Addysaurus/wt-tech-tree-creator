@@ -1,6 +1,6 @@
 /**
  * This configuration was generated using the CKEditor 5 Builder. You can modify it anytime using this link:
- * https://ckeditor.com/ckeditor-5/builder/?redirect=portal#installation/NoNgNARATAdAzPCkAsAOEUCsUAMrM4DsqOAnGdoVIYQIw5Gm0iGmqlTJvJIQCmAOyQ4wwWmBGSJYWgF1IIACbIARiGSEIsoA
+ * https://ckeditor.com/ckeditor-5/builder/?redirect=portal#installation/NoNgNARATAdAzPCkQE4UBZ0HYAcAGEQrPPARiy3SgxDgFYQs66d0U9K8Uo8kIBTAHZI8YYKTCipksKQC6kAGYBDKABMAxgCM1EOUA===
  */
 
 const {
@@ -11,11 +11,13 @@ const {
 	Autosave,
 	BlockQuote,
 	Bold,
+	Bookmark,
 	CloudServices,
 	Code,
 	CodeBlock,
 	Emoji,
 	Essentials,
+	FindAndReplace,
 	FontBackgroundColor,
 	FontColor,
 	FontFamily,
@@ -24,7 +26,6 @@ const {
 	Heading,
 	Highlight,
 	HorizontalLine,
-	HtmlComment,
 	HtmlEmbed,
 	ImageBlock,
 	ImageCaption,
@@ -49,6 +50,13 @@ const {
 	PasteFromMarkdownExperimental,
 	PasteFromOffice,
 	RemoveFormat,
+	SpecialCharacters,
+	SpecialCharactersArrows,
+	SpecialCharactersCurrency,
+	SpecialCharactersEssentials,
+	SpecialCharactersLatin,
+	SpecialCharactersMathematical,
+	SpecialCharactersText,
 	Strikethrough,
 	Style,
 	Subscript,
@@ -59,7 +67,9 @@ const {
 	TableColumnResize,
 	TableProperties,
 	TableToolbar,
+	TextPartLanguage,
 	TextTransformation,
+	Title,
 	TodoList,
 	Underline,
 	WordCount
@@ -71,6 +81,9 @@ const LICENSE_KEY =
 const editorConfig = {
 	toolbar: {
 		items: [
+			'findAndReplace',
+			'textPartLanguage',
+			'|',
 			'heading',
 			'style',
 			'|',
@@ -89,8 +102,10 @@ const editorConfig = {
 			'removeFormat',
 			'|',
 			'emoji',
+			'specialCharacters',
 			'horizontalLine',
 			'link',
+			'bookmark',
 			'mediaEmbed',
 			'insertTable',
 			'highlight',
@@ -115,11 +130,13 @@ const editorConfig = {
 		Autosave,
 		BlockQuote,
 		Bold,
+		Bookmark,
 		CloudServices,
 		Code,
 		CodeBlock,
 		Emoji,
 		Essentials,
+		FindAndReplace,
 		FontBackgroundColor,
 		FontColor,
 		FontFamily,
@@ -128,7 +145,6 @@ const editorConfig = {
 		Heading,
 		Highlight,
 		HorizontalLine,
-		HtmlComment,
 		HtmlEmbed,
 		ImageBlock,
 		ImageCaption,
@@ -153,6 +169,13 @@ const editorConfig = {
 		PasteFromMarkdownExperimental,
 		PasteFromOffice,
 		RemoveFormat,
+		SpecialCharacters,
+		SpecialCharactersArrows,
+		SpecialCharactersCurrency,
+		SpecialCharactersEssentials,
+		SpecialCharactersLatin,
+		SpecialCharactersMathematical,
+		SpecialCharactersText,
 		Strikethrough,
 		Style,
 		Subscript,
@@ -163,7 +186,9 @@ const editorConfig = {
 		TableColumnResize,
 		TableProperties,
 		TableToolbar,
+		TextPartLanguage,
 		TextTransformation,
+		Title,
 		TodoList,
 		Underline,
 		WordCount
@@ -172,7 +197,7 @@ const editorConfig = {
 		supportAllValues: true
 	},
 	fontSize: {
-		options: [10, 'default', 14, 16, 18, 20, 22],
+		options: [10, 12, 14, 'default', 18, 20, 22],
 		supportAllValues: true
 	},
 	heading: {
