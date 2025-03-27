@@ -60,19 +60,32 @@ document.addEventListener("DOMContentLoaded", function () {
         const nameLabel = document.createElement("label");
         nameLabel.classList.add("modal-form-label");
         nameLabel.setAttribute("for", `weapon-name-${number}`);
-        nameLabel.textContent = "Name:";
+        nameLabel.textContent = "Name: ";
         const nameInput = document.createElement("input");
         nameInput.setAttribute("type", "text");
         nameInput.setAttribute("id", `weapon-name-${number}`);
         nameDiv.appendChild(nameLabel);
         nameDiv.appendChild(nameInput);
 
+        // Create Caliber field
+        const caliberDiv = document.createElement("div");
+        const caliberLabel = document.createElement("label");
+        caliberLabel.classList.add("modal-form-label");
+        caliberLabel.setAttribute("for", `weapon-caliber-${number}`);
+        caliberLabel.textContent = "Caliber (mm): ";
+        const caliberInput = document.createElement("input");
+        caliberInput.setAttribute("type", "number");
+        caliberInput.setAttribute("id", `weapon-caliber-${number}`);
+        caliberInput.setAttribute("class", `form-number-entry`);
+        caliberDiv.appendChild(caliberLabel);
+        caliberDiv.appendChild(caliberInput);
+
         // Create Amount field
         const amountDiv = document.createElement("div");
         const amountLabel = document.createElement("label");
         amountLabel.classList.add("modal-form-label");
         amountLabel.setAttribute("for", `weapon-amount-${number}`);
-        amountLabel.textContent = "Amount:";
+        amountLabel.textContent = "Amount: ";
         const amountInput = document.createElement("input");
         amountInput.setAttribute("type", "text");
         amountInput.setAttribute("id", `weapon-amount-${number}`);
@@ -84,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const ammoLabel = document.createElement("label");
         ammoLabel.classList.add("modal-form-label");
         ammoLabel.setAttribute("for", `weapon-ammo-count-${number}`);
-        ammoLabel.textContent = "Ammunition count:";
+        ammoLabel.textContent = "Ammunition count: ";
         const ammoInput = document.createElement("input");
         ammoInput.setAttribute("type", "text");
         ammoInput.setAttribute("id", `weapon-ammo-count-${number}`);
@@ -103,6 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Append elements to the weapon div
         weaponDiv.appendChild(weaponTitle);
         weaponDiv.appendChild(nameDiv);
+        weaponDiv.appendChild(caliberDiv);
         weaponDiv.appendChild(amountDiv);
         weaponDiv.appendChild(ammoDiv);
         weaponDiv.appendChild(removeBtn);
@@ -127,6 +141,8 @@ document.addEventListener("DOMContentLoaded", function () {
             weapon.querySelector("h3").textContent = `Weapon ${weaponCount}`;
             weapon.querySelector("label[for^='weapon-name']").setAttribute("for", `weapon-name-${weaponCount}`);
             weapon.querySelector("input[id^='weapon-name']").setAttribute("id", `weapon-name-${weaponCount}`);
+            weapon.querySelector("label[for^='weapon-caliber']").setAttribute("for", `weapon-caliber-${weaponCount}`);
+            weapon.querySelector("input[id^='weapon-caliber']").setAttribute("id", `weapon-caliber-${weaponCount}`);
             weapon.querySelector("label[for^='weapon-amount']").setAttribute("for", `weapon-amount-${weaponCount}`);
             weapon.querySelector("input[id^='weapon-amount']").setAttribute("id", `weapon-amount-${weaponCount}`);
             weapon.querySelector("label[for^='weapon-ammo-count']").setAttribute("for", `weapon-ammo-count-${weaponCount}`);
